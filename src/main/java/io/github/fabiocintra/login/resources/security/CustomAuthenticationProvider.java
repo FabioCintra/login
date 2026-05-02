@@ -2,7 +2,7 @@ package io.github.fabiocintra.login.resources.security;
 
 import io.github.fabiocintra.login.resources.entity.User;
 import io.github.fabiocintra.login.resources.service.UserService;
-import io.github.fabiocintra.login.utils.exceptions.UserNotFoundException;
+import io.github.fabiocintra.login.resources.utils.exceptions.UserNotFoundException;
 import lombok.RequiredArgsConstructor;
 import org.jspecify.annotations.Nullable;
 import org.springframework.security.authentication.AuthenticationProvider;

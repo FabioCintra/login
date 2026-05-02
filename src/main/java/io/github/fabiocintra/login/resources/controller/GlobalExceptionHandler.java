@@ -1,9 +1,9 @@
 package io.github.fabiocintra.login.resources.controller;
 
-import io.github.fabiocintra.login.utils.exceptions.UserNameExistsException;
-import io.github.fabiocintra.login.utils.exceptions.UserNotFoundException;
-import io.github.fabiocintra.login.utils.exceptions.tratament.FieldError;
-import io.github.fabiocintra.login.utils.exceptions.tratament.TranslaterException;
+import io.github.fabiocintra.login.resources.utils.exceptions.UserNameExistsException;
+import io.github.fabiocintra.login.resources.utils.exceptions.UserNotFoundException;
+import io.github.fabiocintra.login.resources.utils.exceptions.tratament.FieldError;
+import io.github.fabiocintra.login.resources.utils.exceptions.tratament.TranslaterException;
 import org.springframework.http.HttpStatus;
 import org.springframework.web.bind.MethodArgumentNotValidException;
 import org.springframework.web.bind.annotation.ExceptionHandler;

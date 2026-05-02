@@ -3,7 +3,7 @@ package io.github.fabiocintra.login.resources.entity.mappers;
 import io.github.fabiocintra.login.resources.entity.User;
 import io.github.fabiocintra.login.resources.entity.dto.UserRequest;
 import io.github.fabiocintra.login.resources.entity.dto.UserResponse;
-import io.github.fabiocintra.login.utils.annotations.Mapper;
+import io.github.fabiocintra.login.resources.utils.annotations.Mapper;
 
 @Mapper
 public class UserMapper {

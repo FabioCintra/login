@@ -1,4 +1,4 @@
-package io.github.fabiocintra.login.utils.exceptions.tratament;
+package io.github.fabiocintra.login.resources.utils.exceptions.tratament;
 
 import java.util.List;
 
