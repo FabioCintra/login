@@ -1,4 +1,4 @@
-package io.github.fabiocintra.login.resources.entity.dto;
+package io.github.fabiocintra.login.resources.model.dto.user;
 
 import jakarta.validation.constraints.*;
 

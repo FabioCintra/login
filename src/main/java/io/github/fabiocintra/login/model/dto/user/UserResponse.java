@@ -1,4 +1,4 @@
-package io.github.fabiocintra.login.resources.entity.dto;
+package io.github.fabiocintra.login.resources.model.dto.user;
 
 import java.time.LocalDate;
 import java.time.LocalDateTime;
@@ -6,7 +6,6 @@ import java.time.LocalDateTime;
 public record UserResponse(
         int id,
         String userName,
-        String password,
         LocalDate dateOfBirth,
         LocalDateTime create_date
 ) {}

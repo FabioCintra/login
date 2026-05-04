@@ -1,6 +1,6 @@
 package io.github.fabiocintra.login.resources.repository;
 
-import io.github.fabiocintra.login.resources.entity.User;
+import io.github.fabiocintra.login.resources.model.User;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.stereotype.Repository;
 

@@ -1,15 +1,13 @@
 package io.github.fabiocintra.login.resources.controller;
 
-import io.github.fabiocintra.login.resources.entity.User;
-import io.github.fabiocintra.login.resources.entity.dto.UserRequest;
-import io.github.fabiocintra.login.resources.entity.dto.UserResponse;
-import io.github.fabiocintra.login.resources.entity.mappers.UserMapper;
+import io.github.fabiocintra.login.resources.model.User;
+import io.github.fabiocintra.login.resources.model.dto.user.UserRequest;
+import io.github.fabiocintra.login.resources.model.dto.user.UserResponse;
+import io.github.fabiocintra.login.resources.model.mappers.UserMapper;
 import io.github.fabiocintra.login.resources.service.UserService;
-import jakarta.persistence.criteria.CriteriaBuilder;
 import jakarta.validation.Valid;
 import lombok.RequiredArgsConstructor;
 import org.springframework.http.HttpStatus;
-import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
 @RestController

@@ -1,6 +1,6 @@
 package io.github.fabiocintra.login.resources.utils;
 
-import io.github.fabiocintra.login.resources.entity.User;
+import io.github.fabiocintra.login.resources.model.User;
 import io.github.fabiocintra.login.resources.repository.UserRepository;
 import io.github.fabiocintra.login.resources.utils.annotations.Validate;
 import io.github.fabiocintra.login.resources.utils.exceptions.UserNameExistsException;

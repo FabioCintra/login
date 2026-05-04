@@ -1,8 +1,8 @@
-package io.github.fabiocintra.login.resources.entity.mappers;
+package io.github.fabiocintra.login.resources.model.mappers;
 
-import io.github.fabiocintra.login.resources.entity.User;
-import io.github.fabiocintra.login.resources.entity.dto.UserRequest;
-import io.github.fabiocintra.login.resources.entity.dto.UserResponse;
+import io.github.fabiocintra.login.resources.model.User;
+import io.github.fabiocintra.login.resources.model.dto.user.UserRequest;
+import io.github.fabiocintra.login.resources.model.dto.user.UserResponse;
 import io.github.fabiocintra.login.resources.utils.annotations.Mapper;
 
 @Mapper
@@ -23,7 +23,6 @@ public class UserMapper {
         return new UserResponse(
                 user.getId(),
                 user.getUsername(),
-                user.getPassword(),
                 user.getDateOfBirth(),
                 user.getCreateAccount()
         );

@@ -1,5 +1,6 @@
 package io.github.fabiocintra.login.resources.controller;
 
+import io.github.fabiocintra.login.resources.utils.exceptions.ClientIdExistsException;
 import io.github.fabiocintra.login.resources.utils.exceptions.UserNameExistsException;
 import io.github.fabiocintra.login.resources.utils.exceptions.UserNotFoundException;
 import io.github.fabiocintra.login.resources.utils.exceptions.tratament.FieldError;
@@ -43,6 +44,16 @@ public class GlobalExceptionHandler {
     public TranslaterException userNotFoundException(UserNotFoundException e){
         return new TranslaterException(
                 HttpStatus.NOT_FOUND.value(),
+                e.getMessage(),
+                List.of()
+        );
+    }
+
+    @ExceptionHandler(ClientIdExistsException.class)
+    @ResponseStatus(HttpStatus.CONFLICT)
+    public TranslaterException clientIdExistsException(ClientIdExistsException e){
+        return new TranslaterException(
+                HttpStatus.CONFLICT.value(),
                 e.getMessage(),
                 List.of()
         );
