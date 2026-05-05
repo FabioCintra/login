@@ -1,9 +1,9 @@
-package io.github.fabiocintra.login.resources.model.mappers;
+package io.github.fabiocintra.login.model.mappers;
 
-import io.github.fabiocintra.login.resources.model.User;
-import io.github.fabiocintra.login.resources.model.dto.user.UserRequest;
-import io.github.fabiocintra.login.resources.model.dto.user.UserResponse;
-import io.github.fabiocintra.login.resources.utils.annotations.Mapper;
+import io.github.fabiocintra.login.model.User;
+import io.github.fabiocintra.login.model.dto.user.UserRequest;
+import io.github.fabiocintra.login.model.dto.user.UserResponse;
+import io.github.fabiocintra.login.utils.annotations.Mapper;
 
 @Mapper
 public class UserMapper {

@@ -1,4 +1,4 @@
-package io.github.fabiocintra.login.resources.utils.exceptions;
+package io.github.fabiocintra.login.utils.exceptions;
 
 public class UserNameExistsException extends RuntimeException{
 

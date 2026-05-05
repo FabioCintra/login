@@ -1,4 +1,4 @@
-package io.github.fabiocintra.login.resources.utils.annotations;
+package io.github.fabiocintra.login.utils.annotations;
 
 import org.springframework.stereotype.Component;
 

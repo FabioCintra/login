@@ -1,4 +1,4 @@
-package io.github.fabiocintra.login.resources.model.dto.user;
+package io.github.fabiocintra.login.model.dto.user;
 
 import java.time.LocalDate;
 import java.time.LocalDateTime;

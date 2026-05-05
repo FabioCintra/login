@@ -1,10 +1,10 @@
-package io.github.fabiocintra.login.resources.controller;
+package io.github.fabiocintra.login.controller;
 
-import io.github.fabiocintra.login.resources.model.User;
-import io.github.fabiocintra.login.resources.model.dto.user.UserRequest;
-import io.github.fabiocintra.login.resources.model.dto.user.UserResponse;
-import io.github.fabiocintra.login.resources.model.mappers.UserMapper;
-import io.github.fabiocintra.login.resources.service.UserService;
+import io.github.fabiocintra.login.model.User;
+import io.github.fabiocintra.login.model.dto.user.UserRequest;
+import io.github.fabiocintra.login.model.dto.user.UserResponse;
+import io.github.fabiocintra.login.model.mappers.UserMapper;
+import io.github.fabiocintra.login.service.UserService;
 import jakarta.validation.Valid;
 import lombok.RequiredArgsConstructor;
 import org.springframework.http.HttpStatus;

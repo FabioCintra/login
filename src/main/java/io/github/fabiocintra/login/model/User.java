@@ -1,4 +1,4 @@
-package io.github.fabiocintra.login.resources.model;
+package io.github.fabiocintra.login.model;
 
 import jakarta.persistence.*;
 import lombok.AllArgsConstructor;

@@ -1,9 +1,9 @@
-package io.github.fabiocintra.login.resources.service;
+package io.github.fabiocintra.login.service;
 
-import io.github.fabiocintra.login.resources.model.User;
-import io.github.fabiocintra.login.resources.repository.UserRepository;
-import io.github.fabiocintra.login.resources.utils.UserValidate;
-import io.github.fabiocintra.login.resources.utils.exceptions.UserNotFoundException;
+import io.github.fabiocintra.login.model.User;
+import io.github.fabiocintra.login.repository.UserRepository;
+import io.github.fabiocintra.login.utils.UserValidate;
+import io.github.fabiocintra.login.utils.exceptions.UserNotFoundException;
 import lombok.RequiredArgsConstructor;
 import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.stereotype.Service;

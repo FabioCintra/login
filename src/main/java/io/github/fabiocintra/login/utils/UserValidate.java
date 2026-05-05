@@ -1,9 +1,9 @@
-package io.github.fabiocintra.login.resources.utils;
+package io.github.fabiocintra.login.utils;
 
-import io.github.fabiocintra.login.resources.model.User;
-import io.github.fabiocintra.login.resources.repository.UserRepository;
-import io.github.fabiocintra.login.resources.utils.annotations.Validate;
-import io.github.fabiocintra.login.resources.utils.exceptions.UserNameExistsException;
+import io.github.fabiocintra.login.model.User;
+import io.github.fabiocintra.login.repository.UserRepository;
+import io.github.fabiocintra.login.utils.annotations.Validate;
+import io.github.fabiocintra.login.utils.exceptions.UserNameExistsException;
 import lombok.RequiredArgsConstructor;
 
 @Validate

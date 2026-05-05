@@ -1,14 +1,15 @@
-package io.github.fabiocintra.login.resources.security.custom.authentication;
+package io.github.fabiocintra.login.security.custom.authentication;
 
-import io.github.fabiocintra.login.resources.model.User;
-import io.github.fabiocintra.login.resources.service.UserService;
-import io.github.fabiocintra.login.resources.utils.exceptions.UserNotFoundException;
+import io.github.fabiocintra.login.model.User;
+import io.github.fabiocintra.login.service.UserService;
+import io.github.fabiocintra.login.utils.exceptions.UserNotFoundException;
 import lombok.RequiredArgsConstructor;
 import org.jspecify.annotations.Nullable;
 import org.springframework.security.authentication.AuthenticationProvider;
 import org.springframework.security.authentication.UsernamePasswordAuthenticationToken;
 import org.springframework.security.core.Authentication;
 import org.springframework.security.core.AuthenticationException;
+import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.stereotype.Component;
 
 @Component
@@ -16,6 +17,7 @@ import org.springframework.stereotype.Component;
 public class CustomAuthenticationProvider implements AuthenticationProvider {
 
     private final UserService userService;
+    private final PasswordEncoder passwordEncoder;
 
     @Override
     public @Nullable Authentication authenticate(Authentication authentication) throws AuthenticationException {
@@ -27,7 +29,7 @@ public class CustomAuthenticationProvider implements AuthenticationProvider {
             throw new UserNotFoundException("User/Password not exists");
         }
 
-        if(!password.equals(userFinded.getPassword())){
+        if(!passwordEncoder.matches(password, userFinded.getPassword())){
             throw new UserNotFoundException("User/Password not exists");
         }
 

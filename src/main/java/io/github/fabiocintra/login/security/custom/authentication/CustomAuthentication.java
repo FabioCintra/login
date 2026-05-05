@@ -1,6 +1,6 @@
-package io.github.fabiocintra.login.resources.security.custom.authentication;
+package io.github.fabiocintra.login.security.custom.authentication;
 
-import io.github.fabiocintra.login.resources.model.User;
+import io.github.fabiocintra.login.model.User;
 import lombok.Getter;
 import lombok.RequiredArgsConstructor;
 import org.jspecify.annotations.Nullable;
