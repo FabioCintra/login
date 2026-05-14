@@ -3,6 +3,7 @@ package io.github.fabiocintra.login.security;
 import io.github.fabiocintra.login.security.custom.authentication.JwtAuthenticationCustomFilter;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
+import org.springframework.core.annotation.Order;
 import org.springframework.http.HttpMethod;
 import org.springframework.security.config.Customizer;
 import org.springframework.security.config.annotation.method.configuration.EnableMethodSecurity;
@@ -15,6 +16,7 @@ import org.springframework.security.web.SecurityFilterChain;
 @Configuration
 @EnableWebSecurity
 @EnableMethodSecurity(securedEnabled = true,jsr250Enabled = true)
+@Order(2)
 public class ResourceServerConfiguration {
 
     @Bean
