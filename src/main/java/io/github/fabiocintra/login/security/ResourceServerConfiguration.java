@@ -24,11 +24,11 @@ public class ResourceServerConfiguration {
         return http
                 .csrf(AbstractHttpConfigurer::disable)
                 .httpBasic(Customizer.withDefaults())
-                .formLogin(Customizer.withDefaults())
-                .authorizeHttpRequests( authorize -> {
-//                    authorize.requestMatchers(HttpMethod.POST, "/users/**").permitAll();
-                    authorize.anyRequest().authenticated();
+                .formLogin(form -> {
+                    form.loginProcessingUrl("/login");
+                    form.loginPage("http://localhost:5173/login");
                 })
+                .authorizeHttpRequests( authorize -> authorize.anyRequest().authenticated())
                 .oauth2ResourceServer(auth -> auth.jwt(Customizer.withDefaults()))
                 .addFilterAfter(customFilter, BearerTokenAuthenticationFilter.class)
                 .build();

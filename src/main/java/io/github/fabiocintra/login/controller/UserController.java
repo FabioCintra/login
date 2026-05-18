@@ -1,6 +1,7 @@
 package io.github.fabiocintra.login.controller;
 
 import io.github.fabiocintra.login.model.User;
+import io.github.fabiocintra.login.model.dto.user.UserLoginRequest;
 import io.github.fabiocintra.login.model.dto.user.UserRequest;
 import io.github.fabiocintra.login.model.dto.user.UserResponse;
 import io.github.fabiocintra.login.model.mappers.UserMapper;
@@ -30,6 +31,11 @@ public class UserController {
     public UserResponse search(@PathVariable("id") Integer id){
         User user = userService.searchById(id);
         return userMapper.toResponse(user);
+    }
+
+    @GetMapping
+    public void login(@RequestBody @Valid UserLoginRequest request){
+
     }
 
 }

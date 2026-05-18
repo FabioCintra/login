@@ -54,13 +54,13 @@ public class AuthorizationServerConfiguration {
                     authorize.requestMatchers("/oauth2").permitAll();
                     authorize.anyRequest().authenticated();
                 })
-                .securityMatcher(oAuth2ASConfigurer.getEndpointsMatcher())
                 .exceptionHandling(
                         exception ->
                                 exception.authenticationEntryPoint(
                                         new LoginUrlAuthenticationEntryPoint("http://localhost:5173/login")
                                 )
                 )
+                .securityMatcher(oAuth2ASConfigurer.getEndpointsMatcher())
                 .build();
 
     }
