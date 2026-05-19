@@ -19,11 +19,14 @@ import java.util.Base64;
 @RequestMapping("/auth")
 public class AuthController {
 
+    private final String clientId =  System.getenv("CId");
+    private final String clientSecret = System.getenv("CSecret");
+
     @GetMapping
     public void startAuth(HttpServletResponse response) throws IOException {
         String auhtorizeUrl = "http://localhost:8080/oauth2/authorize?"
                 + "response_type=code"
-                + "&client_id=meu-client-id"
+                + "&client_id=" + clientId
                 + "&redirect_uri=http://localhost:5173/authorized";
 
         response.sendRedirect(auhtorizeUrl);
@@ -33,7 +36,7 @@ public class AuthController {
     public ResponseEntity rewardToken(@RequestBody CallbackRequest callbackRequest, HttpServletResponse response) throws IOException {
         //Criando o HashCode
         String hashCode = Base64.getEncoder()
-                .encodeToString(("meu-client-id:meu-client-secret").getBytes());
+                .encodeToString((clientId + ":" + clientSecret).getBytes());
         RestClient restClient = RestClient.create();
 
         String acessToken = restClient.post()
