@@ -1,0 +1,9 @@
+package io.github.fabiocintra.login.utils.exceptions;
+
+public class UserNotFoundException extends RuntimeException{
+
+    public UserNotFoundException(String message){
+        super(message);
+    }
+
+}

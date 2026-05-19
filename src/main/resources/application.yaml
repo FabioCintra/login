@@ -1,0 +1,10 @@
+spring:
+  application:
+    name: login
+  config:
+    import: optional:file:.env[.properties]
+  datasource:
+    username: ${DB_USERNAME}
+    password: ${DB_PASSWORD}
+    url: ${DB_URL}
+    driver-class-name: com.mysql.cj.jdbc.Driver
